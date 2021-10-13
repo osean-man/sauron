@@ -51,6 +51,7 @@ class Event:
 
 
 if __name__ == "__main__":
+    # If it was Python 3.10 I would probably try out the match case statements for the first time.
     def object_creator(list_size, content):
         placement = list(content)
         if not list_size:
@@ -76,6 +77,7 @@ if __name__ == "__main__":
                 logging_event.tags()
             elif list_size == 6:
                 print('List size was 6.')
+            # I haven't seen one over 6 yet, but probably need to add some logging if we do have events over 6.
             else:
                 return False
 
@@ -86,6 +88,7 @@ if __name__ == "__main__":
             if 'error' in item:
                 pass
             else:
+                # Some testing here, we will clean this up.
                 positions = list(item)
                 size = len(positions)
                 object_creator(size, item)
